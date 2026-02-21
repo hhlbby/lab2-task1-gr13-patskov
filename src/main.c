@@ -18,13 +18,20 @@ int third_highest(int a[], int n) {
   return a[2];
 }
 int whoIsHigher(int a[], int b[], int n) {
-        int a_third = third_highest(a, n);
-        int b_third = third_highest(b, n);
-        if (a_third > b_third)
-                return 1;
-        else
-                return 2;
+  int a_third = third_highest(a, n);
+  int b_third = third_highest(b, n);
+  if (a_third > b_third)
+    return 1;
+  else
+    return 2;
 }
 
-
-int main(void) { return 0; }
+int main(void) {
+  int class1[N], class2[N];
+  for (int i = 0; i < N; i++) {
+    class1[i] = rand() % 61 + 150;
+    class2[i] = rand() % 61 + 150;
+  }
+  int winner = whoIsHigher(class1, class2, N);
+  printf("The winner is class %d\n", winner);
+}
