@@ -32,6 +32,16 @@ int main(void) {
     class1[i] = rand() % 61 + 150;
     class2[i] = rand() % 61 + 150;
   }
+  printf("Class 1: ");
+  for (int i = 0; i < N; i++) {
+    printf("%d ", class1[i]);
+  }
+  printf("\n");
+  printf("Class 2: ");
+  for (int i = 0; i < N; i++) {
+    printf("%d ", class2[i]);
+  }
   int winner = whoIsHigher(class1, class2, N);
+  printf("\n");
   printf("The winner is class %d\n", winner);
 }
